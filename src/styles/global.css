@@ -3,6 +3,8 @@
     --mustard-yellow: #E2A81E;
     --light-moss-green: #998F47;
     --dark-moss-green: #4F4D1F;
+    --vanilla: #f2ede1;
+    --oatmeal:#eae0d0;
 }
 *{
     padding: 0;
@@ -16,6 +18,7 @@ html{
     font-style: normal;
     overflow-y: scroll;
     scroll-behavior: smooth;
+    background-color: var(--vanilla);
 }
 ul{list-style: none;}
 a{
@@ -43,6 +46,17 @@ form input:focus, form textarea:focus{
     width: 100%;
     height: 100%;
     object-fit: cover;
+}
+.cta{
+    padding: 13px 1.125rem 10px;
+    color: #000;
+    background-color: var(--mustard-yellow);
+    text-align: center;
+    border-radius: 5px;
+    display: block;
+    width: auto;
+    max-width: 225px;
+    text-decoration: none;
 }
 
 
