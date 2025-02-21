@@ -1,5 +1,8 @@
 :root{
     --font-size: 16px;
+    --mustard-yellow: #E2A81E;
+    --light-moss-green: #998F47;
+    --dark-moss-green: #4F4D1F;
 }
 *{
     padding: 0;
