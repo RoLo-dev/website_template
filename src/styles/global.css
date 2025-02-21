@@ -1,0 +1,21 @@
+:root{
+    --font-size: 16px;
+}
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html{
+    font-size: var(--font-size);
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+}
+
+@media (max-width: 921px) {
+    :root{--font-size: 14px;}
+}
+@media (max-width: 480px) {
+    :root{--font-size: 12px;}
+    .wrapper, .small-wrapper{width: 85%;}
+}
