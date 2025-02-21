@@ -2,10 +2,11 @@
     --font-size: 16px;
     --mustard-yellow: #E2A81E;
     --yellow-hover: #c78f00;
-    --light-moss-green: #998F47;
+    --matcha: #c2c282;
     --dark-moss-green: #4F4D1F;
     --vanilla: #f2ede1;
     --oatmeal:#eae0d0;
+    --off-white: #F0EFEA;
 }
 *{
     padding: 0;
@@ -49,7 +50,7 @@ form input:focus, form textarea:focus{
     object-fit: cover;
 }
 .cta{
-    padding: 13px 1.125rem 10px;
+    padding: 17px 1.125rem 14px;
     color: #000;
     background-color: var(--mustard-yellow);
     text-align: center;
@@ -63,14 +64,16 @@ form input:focus, form textarea:focus{
     letter-spacing: 0.5px;
     font-size: 0.9rem;
 }
+.cta:active{transform: scale(0.97);}
 
 
 
-@media screen and (min-width: 921px){
+@media screen and (min-width: 922px){
         .cta:hover{background-color: var(--yellow-hover);}
 }
 @media (max-width: 921px) {
     :root{--font-size: 14px;}
+    .cta:active{background-color: var(--yellow-hover);}
 }
 @media (max-width: 480px) {
     :root{--font-size: 12px;}

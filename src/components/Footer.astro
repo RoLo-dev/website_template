@@ -1,0 +1,59 @@
+<footer>
+    <div class="footer-container wrapper">
+        <div class="col">
+            <a href="#" class="logo">AGENCY</a>
+            <div class="social-icons">
+                <a href="" title="Facebook" aria-label="Facebook link"><i class="fa-brands fa-square-facebook"></i></a>
+                <a href="" title="Linkedin" aria-label="Linkedin link"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="" title="Instagram" aria-label="Instagram link"><i class="fa-brands fa-instagram"></i></a>
+                <a href="" title="YouTube" aria-label="YouTube link"><i class="fa-brands fa-youtube"></i></a>
+                <a href="" title="X - twitter" aria-label="X - twitter link"><i class="fa-brands fa-x-twitter"></i></a>
+            </div>
+        </div>
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col"></div>
+    </div>
+</footer>
+
+<style>
+    footer{
+        width: 100%;
+        padding: 1.5rem 0;
+        background-color: #000;
+    }
+    footer .logo{
+        font-family: "Inter", serif;
+        letter-spacing: 1.25px;
+        font-size: 1.75rem;
+        font-weight: 700;
+        font-style: normal;
+        font-optical-sizing: auto;
+        color: var(--off-white);
+    }
+    .footer-container{
+        display: flex;
+        justify-content: space-between;
+        gap: 2rem 1.5rem;
+        flex-wrap: wrap;
+    }
+    .footer-container .col{
+        width: 25%;
+    }
+    footer .social-icons{
+        margin-top: 2rem;
+        display: flex;
+        gap: 0 1rem;
+    }
+    footer .social-icons a{
+        color: var(--off-white);
+        font-size: 1.25rem;
+    }
+
+    @media screen and (min-width: 922px){
+        footer .social-icons a:hover{color: var(--yellow-hover);}
+    }
+    @media screen and (max-width: 921px){
+        footer .social-icons a:active{color: var(--yellow-hover);}
+    }
+</style>
