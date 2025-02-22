@@ -1,12 +1,21 @@
 <section>
     <div class="hero-container wrapper">
-        <div class="col">
-            <h1>Building captivating and engaging websites for your business</h1>
-            <p>Modi adipisci officia, iste enim accusantium alias similique nesciunt saepe suscipit expedita rem adipisci, ipsam rerum, consequuntur quae quidem eum aut.</p>
+        <div class="col text-col">
+            <div>
+                <h1>Building captivating and engaging websites for your business</h1>
+                <p>Modi adipisci officia, iste enim accusantium alias similique nesciunt saepe suscipit expedita rem adipisci, ipsam rerum, consequuntur quae quidem eum aut.</p>
+            </div>
         </div>
-        <div class="col">
-            <div class="inner-col"></div>
-            <div class="inner-col"></div>
+        <div class="col img-col">
+            <div class="inner-col big-img"></div>
+            <div class="inner-col two-img">
+                <figure>
+                    <img src="" alt="">
+                </figure>
+                <figure>
+                    <img src="" alt="">
+                </figure>
+            </div>
         </div>
     </div>
 </section>
@@ -18,9 +27,29 @@
         margin-bottom: 4rem;
     }
     .hero-container .col{width: 50%;}
+    .hero-container .text-col{
+        padding-right: 2rem;
+        display: flex;
+        align-items: center;
+    }
     .col h1{
         font-size: 2.5rem;
         margin-bottom: 1.75rem;
         line-height: 1.25;
+    }
+    .hero-container .img-col{
+        display: flex;
+        gap: 0 1.5rem;
+        height: 550px;
+        justify-content: space-between;
+    }
+    .img-col .big-img{width: 60%;}
+    .img-col .two-img{width: 35%;}
+    .img-col .inner-col:first-of-type{
+        background-image: url('https://images.unsplash.com/photo-1481487196290-c152efe083f5?q=80&w=4262&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        height: 100%;
     }
 </style>
