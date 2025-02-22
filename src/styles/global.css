@@ -29,7 +29,10 @@ a{
     text-decoration: none;
     transition: all 0.2s ease-in-out;
 }
-button{cursor: pointer;}
+button{
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+}
 a:focus, button:focus,
 form input:focus, form textarea:focus{
     outline: 1px dashed #000;

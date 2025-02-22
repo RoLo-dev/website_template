@@ -31,6 +31,7 @@
         width: 100%;
         padding: 1.5rem 0;
         background-color: var(--oatmeal);
+        border-bottom: 1px solid #d3cabc;
     }
     .header-container{
         display: flex;
@@ -59,7 +60,10 @@
     .header-container nav ul li a{color: var(--charcoal);}
 
     @media screen and (min-width: 922px){
-        .header-container nav ul li a:hover{color: var(--dark-moss-green);}
+        .header-container nav ul li a:hover{
+            color: var(--dark-moss-green);
+            text-decoration: underline;
+        }
     }
     @media screen and (max-width: 921px){
         .header-container nav ul li a:active{color: var(--dark-moss-green);}
