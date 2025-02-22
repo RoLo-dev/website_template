@@ -3,7 +3,13 @@
         <h2>Our Awesome Features</h2>
 
         <div class="card-container">
-            <div class="card"></div>
+            <div class="card">
+                <figure>
+                    <i class="fa-solid fa-face-grin-wide"></i>
+                </figure>
+                <h3>Easy to Use</h3>
+                <p>Lorem ipsum dolor quibusdam aliquam nobis temporibus tempora soluta ut sint voluptates sunt. Esse, suscipit.</p>
+            </div>
 
         </div>
     </div>
@@ -22,5 +28,22 @@
         flex-wrap: wrap;
         padding: 0 1rem;
     }
-    .card-container .card{width: 50%;}
+    .card-container .card{width: 22%;}
+    .card figure{
+        background-color: var(--oatmeal);
+        width: 70px;
+        height: 70px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto;
+        border-radius: 7px;
+        margin-bottom: 1.75rem;
+        font-size: 2rem;
+        color: var(--matcha);
+    }
+    .card h3{
+        text-align: center;
+        margin-bottom: 13px;
+    }
 </style>

@@ -33,6 +33,7 @@ a{
     text-decoration: none;
     transition: all 0.2s ease-in-out;
 }
+p{line-height: 1.5;}
 button{
     cursor: pointer;
     transition: all 0.2s ease-in-out;
