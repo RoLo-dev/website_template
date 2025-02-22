@@ -25,6 +25,7 @@ html{
     background-color: var(--vanilla);
 }
 ul{list-style: none;}
+h2{font-size: 2.125rem;}
 a{
     text-decoration: none;
     transition: all 0.2s ease-in-out;
