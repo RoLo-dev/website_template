@@ -7,6 +7,7 @@
     --vanilla: #f2ede1;
     --oatmeal:#eae0d0;
     --off-white: #F0EFEA;
+    --charcoal: #3b3834;
 }
 *{
     padding: 0;
@@ -20,6 +21,7 @@ html{
     font-style: normal;
     overflow-y: scroll;
     scroll-behavior: smooth;
+    color: var(--charcoal);
     background-color: var(--vanilla);
 }
 ul{list-style: none;}
@@ -31,6 +33,10 @@ button{cursor: pointer;}
 a:focus, button:focus,
 form input:focus, form textarea:focus{
     outline: 1px dashed #000;
+}
+button, form, input,
+textarea{
+    font-family: "Epilogue", serif;
 }
 .wrapper{
     width: 78%;
