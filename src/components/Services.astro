@@ -1,19 +1,19 @@
 <section>
     <div class="services-container wrapper">
         <div class="col img-col"></div>
-        <div class="col">
+        <div class="col text-col">
             <div>
                 <h2>We develop & create captivating sites</h2>
                 <div class="text-container">
                     <div class="row">
-                        <div class="inner-col">01</div>
+                        <div class="inner-col"><i class="fa-solid fa-circle-dot"></i></div>
                         <div class="inner-col">
                             <h3>Refreshing Design</h3>
                             <p>Clean, refreshing and high-quality that gives positive vibes. Figma source file also provided so you can use to prototype, experiment, play or adjust.</p>
                         </div>
                     </div>
                     <div class="row">
-                        <div class="inner-col">02</div>
+                        <div class="inner-col"><i class="fa-solid fa-circle-dot"></i></div>
                         <div class="inner-col">
                             <h3>Developer Friendly</h3>
                             <p>Clean, refreshing and high-quality that gives positive vibes. Figma source file also provided so you can use to prototype, experiment, play or adjust.</p>
@@ -38,10 +38,6 @@
     .services-container .col{width: 50%;}
     .services-container .img-col{
         width: 30%;
-        /* background-image: url('https://images.unsplash.com/photo-1560250056-07ba64664864?q=80&w=3851&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
-        background-position: center;
-        background-size: cover;
-        background-repeat: no-repeat; */
         background-color: var(--oatmeal);
         margin-right: 4rem;
         position: relative;
@@ -55,10 +51,24 @@
         background-size: cover;
         background-repeat: no-repeat;
         position: absolute;
-        /* background-color: var(--oatmeal); */
-        top: -20px;
-        left: -20px;
+        top: -25px;
+        left: -25px;
         z-index: 1;
         box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
     }
+    .services-container .text-col{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .text-col .row{
+        display: flex;
+        justify-content: space-between;
+    }
+    .text-col .row .inner-col:first-of-type{
+        font-size: 1.25rem;
+        font-weight: 900;
+        color: var(--oatmeal);
+    }
+    .text-col .row .inner-col:last-of-type{width: calc(100% - 40px);}
 </style>
