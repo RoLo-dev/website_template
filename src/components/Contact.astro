@@ -13,7 +13,7 @@
             </div>
             <div class="card">
                 <div class="inner-col">
-                    <i class="fa-solid fa-envelope"></i>
+                    <i class="fa-solid fa-phone-flip"></i>
                 </div>
                 <div class="inner-col">
                     <h4>Phone Number</h4>
@@ -22,7 +22,7 @@
             </div>
             <div class="card">
                 <div class="inner-col">
-                    <i class="fa-solid fa-envelope"></i>
+                    <i class="fa-solid fa-location-dot"></i>
                 </div>
                 <div class="inner-col">
                     <h4>Location Address</h4>
@@ -37,5 +37,20 @@
 </section>
 
 <style>
+    .location-info{
+        background-color: var(--oatmeal);
+        padding: 2rem 3rem;
+        display: flex;
+        justify-content: space-between;
+    }
+    .location-info .card{
+        display: flex;
+        gap: 0 14px;
+    }
+    .card .inner-col:last-of-type{
+        width: calc(100%-70px);
+        display: flex;
+        flex-direction: column;
+    }
 
 </style>
