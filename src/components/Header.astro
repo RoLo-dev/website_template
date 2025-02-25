@@ -3,7 +3,7 @@
         <div class="left-col">
             <a href="#" class="logo" title="logo" aria-label="Logo">BZNZ</a>
 
-            <nav>
+            <nav class="header-nav">
                 <ul>
                     <li>
                         <a href="">About Us</a>
@@ -81,7 +81,7 @@
     }
     @media screen and (max-width: 921px){
         .header-container nav ul li a:active{color: var(--dark-moss-green);}
-        .left-col nav, .header-container .right-col{display: none;}
+        .header-container .right-col{display: none;}
 
         .hamburger-btn{
             border: 0;
@@ -115,6 +115,38 @@
             width: 100%;
             justify-content: space-between;
         }
+
+        .left-col nav{
+            /* display: block; */
+            position: absolute;
+            width: 100%;
+            padding: 4rem 0;
+            right: 0;
+            top: 75px;
+            /* height: 100vh; */
+            text-align: center;
+            transform: translate(100%, 0px);
+            background-color: var(--oatmeal);
+            backdrop-filter: blur(10px);
+            transition: all 0.3s ease-in-out;
+            z-index: 9;
+            box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
+        }
+        .left-col nav.show-nav{
+            transform: translateY(0px);
+        }
+        .header-container nav ul li{
+            display: block;
+            margin-right: 0;
+            margin-bottom: 2.5rem;
+            font-size: 1.3rem;
+        }
+        .header-container nav ul li:last-child{
+            margin-bottom: 0;
+        }
+        .header-container nav ul li .cta{
+            margin: 0 auto;
+        }
     }
 </style>
 <script>
@@ -125,9 +157,6 @@
         if (scrollY > 100) {
             header.style.backgroundColor = 'rgba(234, 224, 208, 0.8)';
             header.style.backdropFilter = 'blur(10px)';
-        } else {
-            header.style.backgroundColor = 'rgba(234, 224, 208, 1)';
-            header.style.backdropFilter = 'blur(0px)';
         }
     });
 
@@ -140,7 +169,7 @@
     // mobileCloseIcon?.addEventListener('click', toggleNav)
 
     function toggleNav(){
-        // mobileNav?.classList.toggle('show-nav');
+        mobileNav?.classList.toggle('show-nav');
         hamburgerIcon?.classList.toggle('animate');
     }
 
