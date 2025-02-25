@@ -1,4 +1,4 @@
-<header>
+<header id="header">
     <div class="header-container wrapper">
         <div class="left-col">
             <a href="#" class="logo" title="logo" aria-label="Logo">BZNZ</a>
@@ -17,8 +17,15 @@
                     <li>
                         <a href="">Support</a>
                     </li>
+                    <li class="mobile-el">
+                        <a href="#" class="cta">Get Started</a>
+                    </li>
                 </ul>
             </nav>
+
+            <button class="mobile-el hamburger-btn">
+                <span class="hamburger-icon"></span>
+            </button>
         </div>
         <div class="right-col">
             <a href="#" class="cta">Get Started</a>
@@ -32,6 +39,11 @@
         padding: 1.5rem 0;
         background-color: var(--oatmeal);
         border-bottom: 1px solid #d3cabc;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 10;
+        transition: all 0.3s ease-in;
     }
     .header-container{
         display: flex;
@@ -58,14 +70,31 @@
     }
     .header-container nav ul li:last-child{margin-right: 0;}
     .header-container nav ul li a{color: var(--charcoal);}
+    .header-container nav ul li .cta{color: #000;}
 
     @media screen and (min-width: 922px){
         .header-container nav ul li a:hover{
             color: var(--dark-moss-green);
             text-decoration: underline;
         }
+        .mobile-el{display: none;}
     }
     @media screen and (max-width: 921px){
         .header-container nav ul li a:active{color: var(--dark-moss-green);}
+        .left-col nav, .header-container .right-col{display: none;}
     }
 </style>
+<script>
+    window.addEventListener('scroll', () => {
+        const header = document.getElementById('header');
+        const scrollY = window.scrollY;
+
+        if (scrollY > 100) {
+            header.style.backgroundColor = 'rgba(234, 224, 208, 0.8)';
+            header.style.backdropFilter = 'blur(10px)';
+        } else {
+            header.style.backgroundColor = 'rgba(234, 224, 208, 1)';
+            header.style.backdropFilter = 'blur(0px)';
+        }
+    });
+</script>
