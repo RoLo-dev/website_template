@@ -77,11 +77,44 @@
             color: var(--dark-moss-green);
             text-decoration: underline;
         }
-        .mobile-el{display: none;}
+        .mobile-el{display: none !important;}
     }
     @media screen and (max-width: 921px){
         .header-container nav ul li a:active{color: var(--dark-moss-green);}
         .left-col nav, .header-container .right-col{display: none;}
+
+        .hamburger-btn{
+            border: 0;
+            display: block;
+            padding: 1.125rem 5px;
+            background: transparent;
+        }
+        .hamburger-icon{
+            display: block;
+            position: relative;
+            pointer-events: none;
+        }
+        .hamburger-icon, .hamburger-icon:before, .hamburger-icon:after {
+            width: 2.25rem;
+            height: 2px;
+            background: var(--charcoal);
+            border-radius: 30px;
+            transition: all 0.3s ease-in-out;
+            left: 0;
+        }
+        .hamburger-icon{width: 1.5rem;}
+        .hamburger-icon::before,
+        .hamburger-icon::after{ content: '';position: absolute;left: 0; }
+        .hamburger-icon::before{bottom: 9px;}
+        .hamburger-icon::after{top: 9px;}
+        .animate{ transform: rotate(45deg);width: 2.25rem; }
+        .animate::before{ opacity: 0; }
+        .animate::after{ transform: rotate(90deg) translate(-9px); }
+
+        .header-container .left-col{
+            width: 100%;
+            justify-content: space-between;
+        }
     }
 </style>
 <script>
@@ -97,4 +130,21 @@
             header.style.backdropFilter = 'blur(0px)';
         }
     });
+
+    let mobileNav = document.querySelector('.header-nav');
+    let hamburgerBtn = document.querySelector('.hamburger-btn');
+    let hamburgerIcon = document.querySelector('.hamburger-icon')
+    // let mobileCloseIcon = document.querySelector('.mobile-close-btn')
+
+    hamburgerBtn?.addEventListener('click', toggleNav)
+    // mobileCloseIcon?.addEventListener('click', toggleNav)
+
+    function toggleNav(){
+        // mobileNav?.classList.toggle('show-nav');
+        hamburgerIcon?.classList.toggle('animate');
+    }
+
+    // document.querySelector('.alert-close-btn')?.addEventListener('click', () =>{
+    //     document.querySelector('.alert-banner').style.display = 'none';
+    // })
 </script>
