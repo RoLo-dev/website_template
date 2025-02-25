@@ -37,7 +37,10 @@
     header{
         width: 100%;
         padding: 1.5rem 0;
-        background-color: var(--oatmeal);
+        /* background-color: var(--oatmeal); */
+        background-color: rgba(234, 224, 208, 0.8);
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
         border-bottom: 1px solid #d3cabc;
         position: fixed;
         top: 0;
@@ -119,20 +122,24 @@
         }
 
         .left-col nav{
-            /* display: block; */
-            position: absolute;
+            position: fixed;
             width: 100%;
             padding: 4rem 0;
             right: 0;
-            top: 75px;
+            top: 76px;
             /* height: 100vh; */
             text-align: center;
-            transform: translate(100%, 0px);
-            background-color: var(--oatmeal);
+            transform: translate(100%, 0px);=
+            /* background-color: var(--oatmeal); */
+            border-radius: 0 0 10px 10px;
+            background-color: rgba(234, 224, 208, 0.95);
+            /* background-color: rgba(234, 224, 208, 0.9);
+            -webkit-backdrop-filter: blur(10px);
             backdrop-filter: blur(10px);
+            will-change: backdrop-filter; */
             transition: all 0.3s ease-in-out;
-            z-index: 9;
-            box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
+            z-index: 11;
+            box-shadow: rgba(17, 17, 26, 0.1) 0px 1px 0px;
         }
         .left-col nav.show-nav{
             transform: translateY(0px);
@@ -152,6 +159,7 @@
     }
 </style>
 <script>
+    const nav = document.querySelector('.header-nav')
     window.addEventListener('scroll', () => {
         const header = document.getElementById('header');
         const scrollY = window.scrollY;
