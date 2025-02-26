@@ -93,4 +93,5 @@ textarea{
 @media (max-width: 480px) {
     :root{--font-size: 12px;}
     .wrapper, .small-wrapper{width: 85%;}
+    .cta{font-size: 1.05rem;}
 }
