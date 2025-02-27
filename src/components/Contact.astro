@@ -60,6 +60,7 @@
         display: flex;
         gap: 0 14px;
         width: 22%;
+        min-width: 210px;
     }
     .card .inner-col:last-of-type{
         width: calc(100% - 30px);
@@ -107,6 +108,14 @@
     .form-map iframe{
         width: 100%;
         height: 100%;
+    }
+
+    @media screen and (max-width: 1250px){
+        .form-map .form-col{width: calc(100% - 425px);}
+        .form-map .map-col{width: 400px;}
+    }
+    @media screen and (max-width: 1060px){
+        form input{width: 100%;}
     }
 
 </style>

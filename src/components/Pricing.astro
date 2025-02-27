@@ -75,7 +75,7 @@
         border-radius: 10px;
         border: 1px solid #d3cabc;
         /* border: 1px solid var(--dark-moss-green); */
-        height: 425px;
+        height: 415px;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -110,5 +110,13 @@
         text-align: center;
         font-weight: 500;
         font-size: 1.25rem;
+    }
+    @media screen and (max-width: 921px){
+        .card-container .card{height: 350px;}
+        .card-container .card-two{height: 400px;}
+    }
+    @media screen and (max-width: 480px){
+        .card-container .card,
+        .card-container .card-two{height: 325px;}
     }
 </style>
